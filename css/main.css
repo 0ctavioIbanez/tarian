@@ -1,0 +1,1014 @@
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  font-size: 1.6rem;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: url(../img/bgd6.jpg);
+  background-size: 200px 200px;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+img{
+  width: 100%;
+  max-height: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  cursor: pointer;
+}
+p{
+  font-size: 2.5rem;
+}
+input:focus,button:focus{
+  outline: none;
+}
+li{
+  list-style: none;
+}
+h1{
+  margin: 0;
+}
+
+@media only screen and (max-width: 76.8rem){
+ p{
+   font-size: 2rem;
+ }
+}
+
+/*
+ ===============================================================================
+ Utilidades
+ ===============================================================================
+ */
+:root{
+  --color1: rgb(49, 86, 99);
+  --color2: rgb(195, 152, 0);
+}
+.dfr{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.dfc{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.contenedor{
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.container{
+  margin: 1rem;
+}
+.titulo{
+  font-size: 6rem;
+  color: var(--color1);
+  text-align: center;
+  padding: 3rem 0;
+  font-family: 'Roboto Mono', monospace;
+  margin: 3rem 0;
+}
+@media only screen and (max-width: 76.8rem){
+ .contenedor{
+   margin: 0 1rem;
+ }
+ .titulo{
+   font-size: 4rem;
+ }
+}
+
+.boton{
+  border: none;
+  width: 100%;
+  font-size: 2.5rem;
+  padding: 1rem;
+  color: white;
+  transition: all .3s ease;
+}
+.boton:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgb(139, 110, 5);
+}
+.primary-btn{
+  background-color: var(--color2);
+}
+.secundary-btn{
+  color: var(--color2);
+  border: 1px solid var(--color2);
+  background-color: transparent;
+}
+
+.color-oro{
+  color: var(--color2)!important;
+}
+.color-azul{
+  color: var(--color1)!important;
+}
+
+.whatsapp{
+  width: 5rem;
+  height: 5rem;
+  background-color: #4AC959;
+  color: white;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  padding: .8rem 0;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgb(29, 33, 34);
+  transition: all .3s ease;
+}
+@media only screen and (max-width: 76.8rem){
+ .whatsapp{
+   right: 1rem;
+ }
+}
+.whatsapp:hover{
+  box-shadow: 2px 2px 10px #4AC959;
+}
+/*
+ ===============================================================================
+ portada
+ ===============================================================================
+ */
+.barra{
+  background-color: var(--color1);
+  color: white;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  box-shadow: 0 2px 10px var(--color1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.logo{
+  padding-top: .5rem;
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+}
+.img-logo{
+  position: absolute;
+  top: 15vh;
+  width: 30rem;
+  filter:brightness(1) invert(0)
+}
+nav a{
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+.phone{
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--color2);
+  padding: 1.3rem 1rem 1rem 1.4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all .3s ease;
+}
+.phone:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 5px var(--color2);
+  transition: all .3s ease;
+}
+.close{
+  display: none;
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+.num-phone{
+  display: none;
+  position: fixed;
+  width: auto;
+  top: 6rem;
+  right: 3rem;
+  background-color: rgba(23, 23, 23, 0.85);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  letter-spacing: .2rem;
+}
+.num-phone a{
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.num-phone a:last-child{
+  margin-bottom: 0;
+}
+.portada{
+  margin-top: 6rem;
+}
+.portada .carrusel{
+  width: 100%;
+  height: calc(100vh - 6rem);
+  background-repeat: no-repeat;
+  background-size: cover!important;
+  background-position: center top;
+  position: relative;
+}
+.carrusel:nth-child(2){
+  background: url(../img/carrusel/portada_1.jpg);
+}
+.carrusel:nth-child(3){
+  background: url(../img/carrusel/portada_2.jpg);
+}
+.carrusel:nth-child(4){
+  background: url(../img/carrusel/portada_3.jpg);
+}
+.carrusel:nth-child(5){
+  background: url(../img/carrusel/portada_4.jpg);
+}
+
+@media only screen and (max-width: 76.8rem){
+ .portada .carrusel{
+   min-height: 20rem;
+   height: 50vh;
+ }
+}
+
+
+.titulo-portada{
+  font-size: 6rem;
+  color: white;
+  position: absolute;
+  bottom: 5rem;
+  left: 3rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0 1rem;
+  max-width: 80%;
+}
+.burger, .mobile-menu{
+  display: none;
+}
+@media only screen and (max-width: 76.8rem){
+.burger{
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-around;
+}
+.burger span{
+  border: 1px solid white;
+  width: 100%;
+}
+.mobile-menu{
+  display: block;
+  width: 100%;
+  height: calc(100vh - 6rem);
+  position: fixed;
+  z-index: 10;
+  top: 6rem;
+  background-color: var(--color1);
+  left: -100%;
+}
+ nav{
+   display: none;
+ }
+ .titulo-portada{
+   font-size: 2.5rem;
+   bottom: 1.5rem;
+   left: 1rem;
+   right: 1rem;
+   width: 100%;
+   text-align: center;
+   margin: 0 auto;
+ }
+ .img-logo{
+   left: -10rem;
+   width: 20rem;
+   height: 15rem;
+   top: calc(75vh - 5rem)!important;
+   left: calc(50% - 10rem);
+ }
+  .logo{
+    width: 8rem;
+    text-align: center;
+  }
+  .nav-mobile{
+    flex-direction: column!important;
+  }
+  .nav-mobile a:first-child{
+    margin-top: 3rem;
+  }
+  .nav-mobile a{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+}
+
+
+/*
+ ===============================================================================
+ about
+ ===============================================================================
+ */
+ #nosotros{
+   background-color: white;
+ }
+ .about-descripcion{
+   width: 60%;
+ }
+ .about-img{
+   width: 40%;
+ }
+.title-us{
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--color1);
+}
+
+@media only screen and (max-width: 76.8rem){
+  #nosotros{
+    margin-top: calc(100vh - 11rem);
+  }
+ .title-us{
+   font-size: 2.2rem;
+   text-align: center;
+ }
+ .about-descripcion{
+   width: 100%;
+ }
+ .about-img{
+   width: 100%;
+ }
+}
+ /*
+  ===============================================================================
+  beneficios
+  ===============================================================================
+  */
+.small{
+  max-width: 20rem;
+}
+.hidden-info{
+  display: none;
+}
+.beneficios{
+  margin-top: 5rem;
+  color: white;
+}
+.beneficios .titulo{
+  color: white;
+}
+.tarjeta{
+  width: calc(33.3% - 1rem);
+  min-height: 6rem;
+  text-align: center;
+  padding: 1rem;
+}
+.tarjeta i{
+ font-size: 6rem;
+ color: white;
+}
+.tarjeta-especial{
+  width: 100%;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+.tarjeta-especial i{
+  color: inherit;
+}
+
+@media only screen and (max-width: 76.8rem){
+ .tarjeta{
+   width: 100%;
+   margin: 0;
+   margin-bottom: 3rem;
+   padding: 0;
+ }
+}
+
+/*
+ ===============================================================================
+ paquetes
+ ===============================================================================
+ */
+.paquetes-tarjetas{
+  width: calc(33.3% - 3rem);
+  height: 55rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgb(71, 71, 71);
+  padding-bottom: 1rem;
+}
+.paquete-titulo{
+  color: white;
+  padding: 1rem 3rem;
+  margin: 0;
+  width: 100%;
+}
+.silver{
+  background-color: background: rgba(226,226,226,1);
+  background: -moz-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 32%, rgba(209,209,209,1) 52%, rgba(240,240,240,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226,226,226,1)), color-stop(32%, rgba(219,219,219,1)), color-stop(52%, rgba(209,209,209,1)), color-stop(100%, rgba(240,240,240,1)));
+  background: -webkit-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 32%, rgba(209,209,209,1) 52%, rgba(240,240,240,1) 100%);
+  background: -o-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 32%, rgba(209,209,209,1) 52%, rgba(240,240,240,1) 100%);
+  background: -ms-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 32%, rgba(209,209,209,1) 52%, rgba(240,240,240,1) 100%);
+}
+.gold{
+  background: rgba(227,200,158,1);
+  background: -moz-linear-gradient(45deg, rgba(227,200,158,1) 0%, rgba(189,126,30,1) 47%, rgba(227,200,158,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(227,200,158,1)), color-stop(47%, rgba(189,126,30,1)), color-stop(100%, rgba(227,200,158,1)));
+  background: -webkit-linear-gradient(45deg, rgba(227,200,158,1) 0%, rgba(189,126,30,1) 47%, rgba(227,200,158,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(227,200,158,1) 0%, rgba(189,126,30,1) 47%, rgba(227,200,158,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(227,200,158,1) 0%, rgba(189,126,30,1) 47%, rgba(227,200,158,1) 100%);
+  background: linear-gradient(45deg, rgba(227,200,158,1) 0%, rgba(189,126,30,1) 47%, rgba(227,200,158,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3c89e', endColorstr='#e3c89e', GradientType=1 );
+}
+.diamond{
+  background: rgba(33,180,226,1);
+  background: -moz-linear-gradient(45deg, rgba(33,180,226,1) 0%, rgba(62,108,122,1) 28%, rgba(49,87,99,1) 51%, rgba(62,108,122,1) 67%, rgba(33,180,226,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(33,180,226,1)), color-stop(28%, rgba(62,108,122,1)), color-stop(51%, rgba(49,87,99,1)), color-stop(67%, rgba(62,108,122,1)), color-stop(100%, rgba(33,180,226,1)));
+  background: -webkit-linear-gradient(45deg, rgba(33,180,226,1) 0%, rgba(62,108,122,1) 28%, rgba(49,87,99,1) 51%, rgba(62,108,122,1) 67%, rgba(33,180,226,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(33,180,226,1) 0%, rgba(62,108,122,1) 28%, rgba(49,87,99,1) 51%, rgba(62,108,122,1) 67%, rgba(33,180,226,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(33,180,226,1) 0%, rgba(62,108,122,1) 28%, rgba(49,87,99,1) 51%, rgba(62,108,122,1) 67%, rgba(33,180,226,1) 100%);
+  background: linear-gradient(45deg, rgba(33,180,226,1) 0%, rgba(62,108,122,1) 28%, rgba(49,87,99,1) 51%, rgba(62,108,122,1) 67%, rgba(33,180,226,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21b4e2', endColorstr='#21b4e2', GradientType=1 );
+  color: white;
+}
+.paquete-especial{
+  transform: scale(1.1);
+}
+
+.lista-paquetes{
+  padding: 1rem;
+  text-align: left;
+}
+.lista-paquetes li{
+  margin-bottom: 2rem;
+}
+.lista-paquetes li i{
+  margin-right: 1rem;
+  font-size: 2.5rem;
+  color: var(--color2);
+}
+.lista-paquetes li:last-child{
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 76.8rem){
+ .paquetes-tarjetas{
+   width: 100%;
+   margin: 0 1rem 3rem 1rem;
+ }
+ .paquete-especial{
+   transform: scale(1);
+ }
+}
+
+.comprar{
+  width: 90%;
+  margin: 0 auto;
+}
+.comprar button{
+  width: calc(50% - 1rem);
+  font-weight: normal;
+  font-size: 2rem;
+  flex-grow: 1;
+}
+
+/*Pendiente*/
+.comprar button:last-child{
+  display: none;
+}
+
+.precio{
+  color: var(--color1);
+}
+
+
+.ver-mas{
+  display: none;
+  width: 50%;
+  height: auto;
+  background-color: rgba(59, 59, 59,.95);
+  position: fixed!important;
+  z-index: 10;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  top: 10vh;
+  left: 25%;
+  box-shadow: 2px 2px 5px rgb(59, 59, 59);
+}
+@media only screen and (max-width: 76.8rem){
+ .ver-mas{
+   width: 100%;
+   left: 0;
+ }
+}
+.lista-vermas li{
+  list-style: disc;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.list-level2{
+  list-style: circle!important;
+}
+.close-container{
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(162, 0, 0, 0.83);
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: normal;
+}
+.close-container:hover{
+  cursor: pointer;
+}
+/*
+ ===============================================================================
+ areas
+ ===============================================================================
+ */
+.areas{
+ background-color: var(--color1);
+ color: white;
+ width: 100%;
+ margin-top: 9rem;
+ padding-bottom: 6rem;
+}
+.areas .titulo{
+ color: white;
+}
+@media only screen and (max-width: 76.8rem){
+ .areas .titulo{
+   font-size: 3.5rem;
+ }
+}
+.cinta{
+  justify-content: flex-start;
+}
+.opciones{
+  background-color: white;
+  padding: 1rem;
+  color: var(--color1);
+  box-shadow: 0 -2px 5px var(--color1);
+  margin-right: .1rem;
+  transition: all .3s ease;
+}
+@media only screen and (max-width: 76.8rem){
+ .opciones{
+   flex-grow: 1;
+ }
+}
+.opciones:nth-child(1){
+  border-top-left-radius: 1rem;
+}
+.opciones:nth-child(4){
+  border-top-right-radius: 1rem;
+}
+
+.opciones:hover{
+  cursor: pointer;
+  box-shadow: 0 0px 5px var(--color2);
+}
+.active{
+  background-color: var(--color2);
+  color: white;
+  font-weight: 600;
+}
+.area-texto{
+  background-color: white;
+  color: var(--color1);
+  padding: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+@media only screen and (max-width: 76.8rem){
+ .area-texto{
+   border-top-right-radius: 0;
+ }
+ .active{
+   background-color: var(--color2);
+   color: white;
+   font-weight: 400;
+ }
+}
+.area-texto p{
+  margin: 0;
+  width: 60%;
+}
+
+.civil,.mercantil, .laboral{
+  display: none;
+}
+
+
+.areas{
+  width: 100%;
+  overflow: hidden;
+}
+.area-texto .contenedor{
+  justify-content: center;
+  padding:  1rem;
+  width: 100%;
+}
+
+.card-area{
+  width: calc(33% - 1rem);
+  height: 15rem;
+  background-position: center center!important;
+  background-size: cover!important;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+.card-area::before{
+  content: '';
+  background-color: rgba(14, 14, 14, 0.70);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.card-area::after{
+  position: absolute;
+  z-index: 1;
+  font-size: 3rem;
+  text-align: center;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 76.8rem){
+  .area-texto .contenedor{
+    width: 100%;
+    margin-left: 0;
+  }
+ .card-area{
+   width: 100%;
+   margin-right: 0;
+   flex-grow: 1;
+ }
+}
+
+
+/*Pestaña Familiar*/
+.tab-fam .card-area:nth-child(1){
+  background: url(../img/familiar.jpg);
+}
+.tab-fam .card-area:nth-child(1)::after{
+  content: 'Divorcios';
+}
+
+.tab-fam .card-area:nth-child(2){
+  background: url(../img/patria.jpg);
+}
+.tab-fam .card-area:nth-child(2)::after{
+  content: 'Patria potestad';
+}
+
+.tab-fam .card-area:nth-child(3){
+  background: url(../img/pension.jpg);
+}
+.tab-fam .card-area:nth-child(3)::after{
+  content: 'Pensión alimenticia';
+}
+
+.tab-fam .card-area:nth-child(4){
+  background: url(../img/guarda.jpeg);
+}
+.tab-fam .card-area:nth-child(4)::after{
+  content: 'Guarda y custodia';
+}
+
+.tab-fam .card-area:nth-child(5){
+  background: url(../img/restriccion.jpg);
+}
+.tab-fam .card-area:nth-child(5)::after{
+  content: 'Restricción internacional';
+}
+
+/*Pestaña Civil*/
+.tab-civil .card-area:nth-child(1){
+  background: url(../img/civil-contrato.jpg);
+}
+.tab-civil .card-area:nth-child(1)::after{
+  content: 'Cumplimiento de Contratos';
+}
+
+.tab-civil .card-area:nth-child(2){
+  background: url(../img/civil-colectivas.jpeg);
+}
+.tab-civil .card-area:nth-child(2)::after{
+  content: 'Acciones colectivas';
+}
+
+.tab-civil .card-area:nth-child(3){
+  background: url(../img/civil-hipo.jpg);
+}
+.tab-civil .card-area:nth-child(3)::after{
+  content: 'Créditos e hipotecas';
+}
+
+.tab-civil .card-area:nth-child(4){
+  background: url(../img/civil-renta.jpg);
+}
+.tab-civil .card-area:nth-child(4)::after{
+  content: 'Arrendamiento';
+}
+
+.tab-civil .card-area:nth-child(5){
+  background: url(../img/civil-servicios.jpg);
+}
+.tab-civil .card-area:nth-child(5)::after{
+  content: 'Prestación de servicios';
+}
+
+.tab-civil .card-area:nth-child(6){
+  background: url(../img/civil-damage.jpg);
+}
+.tab-civil .card-area:nth-child(6)::after{
+  content: 'Daños y perjuicios';
+}
+
+.tab-civil .card-area:nth-child(7){
+  background: url(../img/civil-moral.jpg);
+}
+.tab-civil .card-area:nth-child(7)::after{
+  content: 'Daño moral';
+}
+
+.tab-civil .card-area:nth-child(8){
+  background: url(../img/civil-civizmo.jpg);
+}
+.tab-civil .card-area:nth-child(8)::after{
+  content: 'Responsabilidad civil';
+}
+
+.tab-civil .card-area:nth-child(9){
+  background: url(../img/civil-rights.jpg);
+}
+.tab-civil .card-area:nth-child(9)::after{
+  content: 'Derechos';
+}
+
+
+/*Pestaña Mercantil*/
+.tab-mercantil .card-area:nth-child(1){
+  background: url(../img/civil-contrato.jpg);
+}
+.tab-mercantil .card-area:nth-child(1)::after{
+  content: 'Contratos mercantiles';
+}
+
+.tab-mercantil .card-area:nth-child(2){
+  background: url(../img/mercantil-angry.jpg);
+}
+.tab-mercantil .card-area:nth-child(2)::after{
+  content: 'Conflictos accionistas y socios';
+}
+
+.tab-mercantil .card-area:nth-child(3){
+  background: url(../img/mercantil-credito.webp);
+}
+.tab-mercantil .card-area:nth-child(3)::after{
+  content: 'Títulos y operaciónes de crédito';
+}
+
+.tab-mercantil .card-area:nth-child(4){
+  background: url(../img/mercantil-seguros.jpeg);
+}
+.tab-mercantil .card-area:nth-child(4)::after{
+  content: 'Seguros y fianzas';
+}
+
+.tab-mercantil .card-area:nth-child(5){
+  background: url(../img/mercantil-fideicomiso.jpg);
+}
+.tab-mercantil .card-area:nth-child(5)::after{
+  content: 'Fideicomisos';
+}
+
+/*Pestaña Laboral*/
+.tab-laboral .card-area:nth-child(1){
+  background: url(../img/civil-contrato.jpg);
+}
+.tab-laboral .card-area:nth-child(1)::after{
+  content: 'Demandas';
+}
+
+.tab-laboral .card-area:nth-child(2){
+  background: url(../img/mercantil-angry.jpg);
+}
+.tab-laboral .card-area:nth-child(2)::after{
+  content: 'Despido injustificado';
+}
+
+.tab-laboral .card-area:nth-child(3){
+  background: url(../img/laboral-contrato.jpg);
+}
+.tab-laboral .card-area:nth-child(3)::after{
+  content: 'Rescisión de contrato';
+}
+
+.tab-laboral .card-area:nth-child(4){
+  background: url(../img/mercantil-prestamo.jpg);
+}
+.tab-laboral .card-area:nth-child(4)::after{
+  content: 'Pago de prestaciones adeudadas';
+}
+
+.tab-laboral .card-area:nth-child(5){
+  background: url(../img/mercantil-fideicomiso.jpg);
+}
+.tab-laboral .card-area:nth-child(5)::after{
+  content: 'Horas extras';
+}
+
+.tab-laboral .card-area:nth-child(6){
+  background: url(../img/laboral-heredero.jpg);
+}
+.tab-laboral .card-area:nth-child(6)::after{
+  content: 'Reconocimiento de legítimo beneficiario';
+}
+
+.tab-laboral .card-area:nth-child(7){
+  background: url(../img/laboral-pago.jpeg);
+}
+.tab-laboral .card-area:nth-child(7)::after{
+  content: 'Pago por muerte del trabajador';
+}
+/*
+ ===============================================================================
+ Footer
+ ===============================================================================
+ */
+ .footer-img{
+   width: 100%;
+   height: 60vh;
+   background: url(../img/footer.jpg);
+   background-position: center center;
+   background-size: cover;
+   background-attachment: fixed;
+ }
+ .img-container{
+   height: 100%;
+   text-align: center;
+   padding: 2rem 0;
+   position: relative;
+ }
+ .img-container img{
+  width: auto;
+ }
+@media only screen and (max-width: 76.8rem){
+  .img-container img{
+   width: 100%;
+   padding-top: 3rem;
+  }
+}
+ footer{
+   width: 100%;
+   padding: 6rem 0;
+   background-color: var(--color1);
+   color: white;
+ }
+ fieldset{
+   padding: 2rem;
+   position: relative;
+ }
+ legend{
+   font-size: 2.5rem;
+   text-align: center;
+   padding: 1rem;
+ }
+ .formulario{
+   width: 50rem;
+ }
+ @media only screen and (max-width: 76.8rem){
+  .formulario{
+    width: 100%;
+  }
+ }
+ .div-form{
+   margin-bottom: 3rem;
+   position: relative;
+ }
+ .div-form label{
+   position: absolute;
+   bottom: 1rem;
+   left: 1rem;
+   z-index: 0;
+ }
+ .input-form{
+   width: 100%;
+   font-size: 2rem;
+   padding: 1rem;
+   border: none;
+   background-color: transparent;
+   border-bottom: 1px solid white;
+   caret-color: white;
+   position: relative;
+   z-index: 2;
+   transition: all .3s ease;
+   color: white;
+ }
+ .input-form:focus{
+   border-bottom: 1px solid var(--color2);
+ }
+ .label-mensaje{
+   position: static!important;
+   padding: 1rem;
+ }
+ .mensaje-form{
+   width: 100%;
+   height: 10rem;
+   margin-top: 1rem;
+   font-family: 'Montserrat', sans-serif;
+   outline-color: transparent;
+   background-color: transparent;
+   border: 1px solid white;
+   padding: 1rem;
+   color: white;
+   caret-color: white;
+   transition: all .3s ease;
+   font-size: 1.6rem;
+ }
+ .mensaje-form:focus{
+   border: 1px solid var(--color2);
+ }
+
+.mail-sent{
+  width: 80%;
+  height: 20rem;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  z-index: 10;
+  background-color: #469100;
+  box-shadow: 2px 2px 10px #91e842;
+  display: none;
+}
+.container-mail{
+  font-size: 2.5rem;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  padding-top: calc(10% - 5rem);
+  text-align: center;
+}
+.container-mail i{
+  font-size: 4rem;
+}
+
+
+.mapa-container{
+  width: 50%;
+  text-align: center;
+}
+.mapa-container p{
+  margin-bottom: 0;
+}
+.mapa{
+  display: block;
+}
+.mapa-mobile{
+  display: none;
+}
+@media only screen and (max-width: 76.8rem){
+ .mapa{
+   display: none;
+ }
+ .mapa-mobile{
+   display: block;
+   overflow: hidden;
+   margin-top: 3rem;
+ }
+ .mapa-container{
+   width: 100%;
+ }
+}
