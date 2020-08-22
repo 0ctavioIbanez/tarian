@@ -710,7 +710,7 @@ nav a{
   background: url(../img/restriccion.jpg);
 }
 .tab-fam .card-area:nth-child(5)::after{
-  content: 'Restricción internacional';
+  content: 'Restitución internacional';
 }
 
 .tab-fam .card-area:nth-child(6){
@@ -718,6 +718,20 @@ nav a{
 }
 .tab-fam .card-area:nth-child(6)::after{
   content: 'Sucesorio';
+}
+
+.tab-fam .card-area:nth-child(7){
+  background: url(../img/restriccion.jpg);
+}
+.tab-fam .card-area:nth-child(7)::after{
+  content: 'Constitución de patrimonio';
+}
+
+.tab-fam .card-area:nth-child(8){
+  background: url(../img/restriccion.jpg);
+}
+.tab-fam .card-area:nth-child(8)::after{
+  content: 'Reconocimiento de concubinato';
 }
 
 /*Pestaña Civil*/
@@ -782,6 +796,13 @@ nav a{
 }
 .tab-civil .card-area:nth-child(9)::after{
   content: 'Derechos';
+}
+
+.tab-civil .card-area:nth-child(10){
+  background: url(../img/civil-rights.jpg);
+}
+.tab-civil .card-area:nth-child(10)::after{
+  content: 'Prescripción positiva y negativa';
 }
 
 
