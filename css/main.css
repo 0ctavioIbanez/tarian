@@ -713,6 +713,13 @@ nav a{
   content: 'Restricción internacional';
 }
 
+.tab-fam .card-area:nth-child(6){
+  background: url(../img/restriccion.jpg);
+}
+.tab-fam .card-area:nth-child(6)::after{
+  content: 'Sucesorio';
+}
+
 /*Pestaña Civil*/
 .tab-civil .card-area:nth-child(1){
   background: url(../img/civil-contrato.jpg);
