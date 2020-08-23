@@ -7,10 +7,11 @@ body{
   font-size: 1.6rem;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: url(../img/bgd.jpg);
+  background: url(../img/bgd3.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
+
 *, *:before, *:after{
   box-sizing: inherit;
 }
@@ -47,10 +48,9 @@ h1{
 /*
  ===============================================================================
  Utilidades
- ===============================================================================
- */
+ ===============================================================================*/
 :root{
-  --color1: rgb(49, 86, 99);
+  --color1: #315663;
   --color2: rgb(195, 152, 0);
 }
 .dfr{
@@ -146,7 +146,16 @@ h1{
  ===============================================================================
  */
 .barra{
-  background-color: var(--color1);
+  background: rgba(49,86,99,1);
+  background: -moz-linear-gradient(-45deg, rgba(49,86,99,1) 0%, rgba(34,175,218,1) 58%, rgba(33,181,226,1) 62%, rgba(49,86,99,1) 85%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(49,86,99,1)), color-stop(58%, rgba(34,175,218,1)), color-stop(62%, rgba(33,181,226,1)), color-stop(85%, rgba(49,86,99,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(49,86,99,1) 0%, rgba(34,175,218,1) 58%, rgba(33,181,226,1) 62%, rgba(49,86,99,1) 85%);
+  background: -o-linear-gradient(-45deg, rgba(49,86,99,1) 0%, rgba(34,175,218,1) 58%, rgba(33,181,226,1) 62%, rgba(49,86,99,1) 85%);
+  background: -ms-linear-gradient(-45deg, rgba(49,86,99,1) 0%, rgba(34,175,218,1) 58%, rgba(33,181,226,1) 62%, rgba(49,86,99,1) 85%);
+  background: linear-gradient(135deg, rgba(49,86,99,1) 0%, rgba(34,175,218,1) 58%, rgba(33,181,226,1) 62%, rgba(49,86,99,1) 85%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#315663', endColorstr='#315663', GradientType=1 );
+
+
   color: white;
   height: 6rem;
   position: fixed;
@@ -363,7 +372,7 @@ nav a{
 }
 .beneficios{
   margin-top: 5rem;
-  background-color: white;
+  background-image: linear-gradient(to bottom right, white, #b9b9b9);
   color: var(--color1);
 }
 .tarjeta{
